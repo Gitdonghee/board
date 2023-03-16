@@ -24,6 +24,9 @@ public class Question extends Auditable {
     @Enumerated(value = EnumType.STRING)
     @Column(nullable = false)
     private QuestionStatus questionStatus = QuestionStatus.QUESTION_REGISTRATION;
+    @Column(nullable = false)
+    private long views;
+
 
     @ManyToOne
     @JoinColumn(name = "MEMBER_ID")
